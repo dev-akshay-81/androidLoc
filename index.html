@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function calc()
+{
+	var a = parseInt(document.myform.num_a.value,10);
+	var b = parseInt(document.myform.num_b.value,10);
+	var sum = window.ob.calculateSum(a,b);
+	document.myform.result.value = sum;
+}
+
+function instant()
+{
+    var inssum = window.ob.calculateSum(a,b);
+    document.getElementById("showLat").innerHTML = inssum;
+}
+
+instant();
+</script>
+</head>
+<body>
+<form name="myform">
+
+    <div id="showLat"></div>
+
+    <!--
+<br/>number 1: <input type="text" name="num_a"/>
+<br/>number 2: <input type="text" name="num_b"/>
+<br/><input type="button" onclick="calc()" value="+"/>
+<br/>result: <input type="text" name="result"/>-->
+</form>
+</body>
+</html>
